@@ -30,7 +30,7 @@
     </div>
     <div class="flex">
         <div class="wrap-fixed">
-            <div class="btn bg-color2 px-3 py-1 shadow" data-muted="false" id="mediacontrol" style="font-size: 14pt;">
+            <div class="btn bg-color2 px-3 py-1 shadow" data-muted="false" id="mediacontrol"  style="font-size: 14pt; display: none;">
                 <i class="fas fa-volume"></i>
             </div>
         </div>
@@ -221,6 +221,7 @@
             $('.overlay').show()
         } else {
             $('.rightPanel').show()
+            $('#mediacontrol').show()
             $('#audio1').get(0).play()
             AOS.init();
         }
@@ -257,6 +258,7 @@
                 $('body').css('overflow-y', 'scroll');
                 $('.overlay').hide();
                 $('.rightPanel').show()
+                $('#mediacontrol').show()
                 $('#audio1').get(0).play();
                 AOS.init();
             })

@@ -168,6 +168,10 @@
     color: #fff;
   }
 
+  #mediacontrol:hover {
+    color : #fff;
+  }
+
   img, svg {
     vertical-align: middle;
   }
