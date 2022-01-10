@@ -215,7 +215,9 @@
 
         let to = getUrlParameter('to') ;
         if(typeof to === 'string') {
+            to = to.toLowerCase()
             to = to.replaceAll('+', ' ')
+            to = to.replaceAll('dan', '&')
             $('#to').text(to)
             $('body').css('overflow-y', 'hidden')
             $('.overlay').show()
