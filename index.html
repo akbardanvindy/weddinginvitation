@@ -164,7 +164,7 @@
         
     </div>
 
-    <div class="tab-bot d-flex justify-content-around align-items-center d-md-none bg-light py-2 " style="position: fixed; bottom: 0 ; left: 0; width: 100%; box-sizing: border-box; background-color: #fff; border-top: 1px solid #ececec;">
+    <div class="tab-bottom d-flex justify-content-around align-items-center d-md-none bg-light py-2 " style="position: fixed; bottom: 0 ; left: 0; width: 100%; box-sizing: border-box; background-color: #fff; border-top: 1px solid #ececec;">
         <div class="tab-item active" data-target="home">
             <img src="assets/icon/home_inactive.svg" class="tab-icon">
             <br>
@@ -219,6 +219,10 @@
         $(document).ready(function() {
             // alert()
            
+            if($('.tab-bottom').length) {
+                $('.leftPanel').css('height', `calc(100% - ${$('.tab-bottom').height()}px)`)
+            }
+
             $(document).on('click', '.tab-item', function() {
                 const id = $(this).data('target') ;
                 $('.tab-item').removeClass('active');
