@@ -10,10 +10,6 @@
     margin : 0 ;
   }
 
-  *, html {
-    scroll-behavior: smooth;
-  }
-
   .rl-flex {
     background: #fff;
     display: flex;
@@ -146,7 +142,15 @@
   img {
     max-width: 100%;
   }
-  
+  .color2 {
+    color: #6ac60f;
+  }
+
+  .bg-color2 {
+    background: #6ac60f;
+    color: #fff;
+  }
+
   img, svg {
     vertical-align: middle;
   }
@@ -177,7 +181,7 @@
     }
 
     .leftPanel {
-      height: 550px;
+      height: 91.5vh;
       background: transparent;
     }
 
@@ -189,7 +193,34 @@
       position: relative;
       width: 100%;
     }
-    
+    #btn-lihat {
+      width: 100%;
+    }
+    #btn-lihat:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+    .tab-item {
+      color: #cbcbcb;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 0 11px;
+      text-align: center;
+      flex-direction: column;
+      justify-content: center;
+      line-height: 1;
+    }
+    .tab-item.active {
+      color: #959595;
+      font-weight: 700;
+    }
+
+    .tab-item:hover {
+      cursor: pointer;
+    }
+    .tab-icon {
+      margin-bottom: 5px;
+    }
   /* // Small devices (landscape phones, 576px and up) */
   @media (min-width: 576px) {
 
@@ -233,6 +264,9 @@
       font-size: 55pt;
       font-weight: 100;
       text-align: center;
+    }
+    #btn-lihat {
+      width: auto;
     }
    }
   

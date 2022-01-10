@@ -4,14 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/components.css">
     <title>Undangan Pernikahan Akbar & Vindy</title>
 </head>
-<body>
+<body style="overflow-y: scroll">
+    <div class="overlay" style="position: fixed; background: rgba(255, 255, 255, 0.9); z-index: 99; height: 100%; width: 100%; left: 0; top: 0; overflow: hidden; display: none;">
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
+            <h1 class="color2" style="text-transform: uppercase; font-size: 14pt;">WEDDING INVITATION</h1>
+            <img class="mb-2" src="assets/img/plane-white.svg" >
+            <br>
+            <img src="assets/img/amplopundangan-3x.png" style="margin-bottom: 40px" width="100px">
+            <br>
+            <h4 style="font-size: 10pt; font-family: Montserrat; font-weight: 400;">Kepada Bapak/Ibu/Saudara/i</h4>
+            <h5 id="to" class="color2 my-4" style="text-transform: uppercase; font-size: 14pt;"></h5>
+            <h4 style="font-size: 10pt; font-family: Montserrat; font-weight: 400;" class="mb-4">Kami Mengundangan Anda Untuk Hadir Di Acara Pernikahan Kami.</h4>
+            <button class="btn bg-color2" id="btn-lihat">Lihat Undangan</button>
+        </div>
+    </div>
     <div class="flex">
-        <div class="leftPanel">
+        <div class="leftPanel" id="home">
             <div class="full-img" >
                 <div class="ornamen ornamen-left-top">
                     <img src="assets/img/floral+8+top-left.png" >
@@ -43,13 +57,13 @@
                 </div>
             </div>
         </div>
-        <div class="rightPanel rl-flex">
+        <div class="rightPanel rl-flex" style="display: none;">
             <div class="title mt-2">
                 <div class="quote">Dan segala sesuatu Kami ciptakan berpasang-pasangan supaya kamu mengingat kebesaran Allah</div>
                 <div class="quote-footer">(Qs. Az-Zariyat : 49)</div>
             </div>
-            <div class="title mt-2">
-                <div>
+            <div class="title mt-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
+                <div  id="couple">
                     <h1>Mempelai</h1>
 
                     <div class="img-wrapper">
@@ -64,8 +78,8 @@
                     <p class="couple-detail">Vindy Ayuningrum</p>
                 </div>
             </div>
-            <div class="title mt-5">
-                <div>
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
+                <div id="galeri">
                     <h1>Galeri</h1>
                     
                     <div class="img-wrapper">
@@ -79,14 +93,14 @@
                     </div>
                 </div>
             </div>
-            <div class="title mt-5">
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div>
                     <h1>Undangan</h1>
                     <div>
                         <h1 class="name-undangan-priawanita">Ali Akbar</h1>
                         <div>
                             <p style="line-height: 24px; padding: 20px 35px; font-family: Montserrat; font-weight: 400; color: #333; font-size: 14px; margin : 0!important">
-                                Putra pertama dari Nasun dan Gak Tau
+                                Putra pertama dari Bapak Nasun dan Ibu Yayah
                             </p>
                         </div>
                     </div>
@@ -95,14 +109,14 @@
                         <h1 class="name-undangan-priawanita">Vindy Ayuningrum</h1>
                         <div>
                             <p style="line-height: 24px; padding: 20px 35px; font-family: Montserrat; font-weight: 400; color: #333; font-size: 14px; margin : 0!important">
-                                Putri gak tau dari gak tau dan Gak Tau
+                                Putri kedua dari Bapak Hermanto dan Ibu Endang
                             </p>
                         </div>
                     </div>
 
                 </div>
             </div>
-            <div class="title mt-5">
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div>
                     <div>
                         <h1>Akad Nikah</h1>
@@ -112,7 +126,7 @@
                     <div class="standard">Jl. Pondok Jagung Timur RT01/02 Kec. Serpong Utara Kel. Pondok Jagung Timur Kota Tangerang Selatan</div>
                 </div>
             </div>
-            <div class="title mt-5">
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div>
                     <div>
                         <h1>Resepsi Nikah</h1>
@@ -121,18 +135,18 @@
                     <div class="standard">10.30 sd selesai</div>
                 </div>
             </div>
-            <div class="title mt-5">
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div>
                     <div>
                         <h1>Peta Resepsi Nikah</h1>
                     </div>
-                    <div style="width: 300px; text-align: center;" class="shadow-sm mx-auto">
+                    <div style="width: 300px; text-align: center;" class=" mx-auto">
                         <img src="assets/img/bcpeta.jpeg" alt="barcode peta">
                     </div>
                     <div class="standard">Jl. Pondok Jagung Timur RT01/02 Kec. Serpong Utara Kel. Pondok Jagung Timur Kota Tangerang Selatan</div>
                 </div>
             </div>
-            <div class="title mt-5">
+            <div class="title mt-5 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div>
                     <div>
                         <h1>Panduan Tamu</h1>
@@ -141,7 +155,7 @@
                     <div class="standard">2. Tamu dimohon untuk memantuhi protokol kesehatan</div>
                 </div>
             </div>
-            <div class="title my-5" style="width: 100%;">
+            <div class="title my-5 aos-init aos-animate" style="width: 100%; height:300px;"  data-aos="zoom-in" data-aos-delay="900">
                 <img src="assets/img/save+the+date+floral+8.svg" width="60%">
                 </div>
             </div>
@@ -150,19 +164,77 @@
         
     </div>
 
-    <div class="tab-bot d-flex justify-content-around aligns-item-center d-md-none bg-primary px-4 py-3" style="position: fixed; bottom: 0 ; left: 0; width: 100%; box-sizing: border-box; background-color: #fff; border-top: 1px solid #ececec;">
-        <div class="tab-item text-center">
-            <i class="fas fa-home"></i>
+    <div class="tab-bot d-flex justify-content-around align-items-center d-md-none bg-light py-2 " style="position: fixed; bottom: 0 ; left: 0; width: 100%; box-sizing: border-box; background-color: #fff; border-top: 1px solid #ececec;">
+        <div class="tab-item active" data-target="home">
+            <img src="assets/icon/home_inactive.svg" class="tab-icon">
             <br>
             <span>Home</span>
         </div>
-        <div class="tab-item text-center">
-            <a href="">asasas</a>
+        <div class="tab-item" data-target="couple">
+            <img src="assets/icon/couple_inactive.svg" class="tab-icon">
+            <br>
+            <span>Couple</span>
         </div>
-        <div class="tab-item text-center">
-            <a href="">asasas</a>
+        <div class="tab-item" data-target="galeri">
+            <img src="assets/icon/galeri_inactive.svg" class="tab-icon">
+            <br>
+            <span clas>Galeri</span>
         </div>
+        
     </div>
     <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+       
+
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+            return false;
+        };
+
+        let to = getUrlParameter('to') ;
+        if(typeof to === 'string') {
+            to = to.replaceAll('+', ' ')
+            $('#to').text(to)
+
+            $('body').css('overflow-y', 'hidden')
+            $('.overlay').show()
+        } else {
+             $('.rightPanel').show()
+             AOS.init();
+         }
+
+        $(document).ready(function() {
+            // alert()
+           
+            $(document).on('click', '.tab-item', function() {
+                const id = $(this).data('target') ;
+                $('.tab-item').removeClass('active');
+                $(this).addClass('active');
+                $('html, body').animate({
+                    scrollTop: $(`#${id}`).offset().top,
+                }, 550)
+            })
+
+            $('#btn-lihat').click(function(){
+                $('body').css('overflow-y', 'scroll');
+                $('.overlay').hide();
+                $('.rightPanel').show()
+                AOS.init();
+            })
+        })
+    </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="18.436" viewBox="0 0 122 18.436">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:#eaeaea}.prefix__cls-4,.prefix__cls-5{fill:none;stroke:#ddd;stroke-miterlimit:10}.prefix__cls-5{stroke-dasharray:5.643 5.643}
+        </style>
+    </defs>
+    <g id="prefix__plane_white" data-name="plane white" transform="translate(-622 -304)">
+        <g id="prefix__Group_3940" data-name="Group 3940" transform="translate(-.194 -1786.896)">
+            <path id="prefix__Path_25165" d="M679.078 2109.175l-.941-6.9 14.67-11.375z" data-name="Path 25165" style="fill:#d1d1d1"/>
+            <path id="prefix__Path_25166" d="M680.568 2104.233l6.9 5.1 5.335-18.436z" class="prefix__cls-2" data-name="Path 25166"/>
+            <path id="prefix__Path_25167" d="M680.568 2104.233l-1.491 4.942 3.611-3.376z" data-name="Path 25167" style="fill:#ddd"/>
+            <path id="prefix__Path_25168" d="M678.136 2102.272l-4.942-3.766 19.613-7.61z" class="prefix__cls-2" data-name="Path 25168"/>
+        </g>
+        <g id="prefix__Group_3946" data-name="Group 3946" transform="translate(0 -1789)">
+            <g id="prefix__Group_3945" data-name="Group 3945">
+                <g id="prefix__Group_3942" data-name="Group 3942">
+                    <g id="prefix__Group_3941" data-name="Group 3941">
+                        <path id="prefix__Line_53" d="M2.5 0L0 0" class="prefix__cls-4" data-name="Line 53" transform="translate(664 2102)"/>
+                        <path id="prefix__Line_54" d="M31.036 0L0 0" class="prefix__cls-5" data-name="Line 54" transform="translate(627.322 2102)"/>
+                        <path id="prefix__Line_55" d="M2.5 0L0 0" class="prefix__cls-4" data-name="Line 55" transform="translate(622 2102)"/>
+                    </g>
+                </g>
+                <g id="prefix__Group_3944" data-name="Group 3944">
+                    <g id="prefix__Group_3943" data-name="Group 3943">
+                        <path id="prefix__Line_56" d="M2.5 0L0 0" class="prefix__cls-4" data-name="Line 56" transform="translate(741.5 2102.5)"/>
+                        <path id="prefix__Line_57" d="M31.036 0L0 0" class="prefix__cls-5" data-name="Line 57" transform="translate(704.822 2102.5)"/>
+                        <path id="prefix__Line_58" d="M2.5 0L0 0" class="prefix__cls-4" data-name="Line 58" transform="translate(699.5 2102.5)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
