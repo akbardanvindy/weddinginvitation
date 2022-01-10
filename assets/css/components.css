@@ -113,7 +113,24 @@
     font-weight: 600; 
     text-transform: uppercase;
   }
+  audio, embed {
+    position: absolute;
+    z-index: -9999;
+  }
+  .wrap-fixed {
+    position: fixed;
+    z-index: 99;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+  }
 
+  .wrap-fixed {
+      bottom: 50px;
+      right: 0;
+      margin: 20px;
+      width: 50px;
+  }
 
   .img-wrapper {
     border: 5px solid white;

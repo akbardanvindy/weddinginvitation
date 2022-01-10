@@ -11,6 +11,10 @@
     <title>Undangan Pernikahan Akbar & Vindy</title>
 </head>
 <body style="overflow-y: scroll">
+    <audio autoplay loop id="audio1"> 
+        <source src="assets/audio/music.mp3" type="audio/mpeg"> 
+    </audio> 
+
     <div class="overlay" style="position: fixed; background: rgba(255, 255, 255, 0.9); z-index: 99; height: 100%; width: 100%; left: 0; top: 0; overflow: hidden; display: none;">
         <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center;">
             <h1 class="color2" style="text-transform: uppercase; font-size: 14pt;">WEDDING INVITATION</h1>
@@ -25,6 +29,11 @@
         </div>
     </div>
     <div class="flex">
+        <div class="wrap-fixed">
+            <div class="btn bg-color2 px-3 py-1 shadow" data-muted="false" id="mediacontrol" style="font-size: 14pt;">
+                <i class="fas fa-volume"></i>
+            </div>
+        </div>
         <div class="leftPanel" id="home">
             <div class="full-img" >
                 <div class="ornamen ornamen-left-top">
@@ -58,9 +67,9 @@
             </div>
         </div>
         <div class="rightPanel rl-flex" style="display: none;">
-            <div class="title mt-2">
-                <div class="quote">Dan segala sesuatu Kami ciptakan berpasang-pasangan supaya kamu mengingat kebesaran Allah</div>
-                <div class="quote-footer">(Qs. Az-Zariyat : 49)</div>
+            <div class="title mt-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
+                <h1>Assalamualaikum Wr. Wb.</h1>
+                <div class="quote">Tanpa mengurangi rasa hormat, Kami mengundang Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan kami:</div>
             </div>
             <div class="title mt-2 aos-init aos-animate" data-aos="zoom-in" data-aos-delay="900">
                 <div  id="couple">
@@ -70,7 +79,7 @@
                         <img src="assets/img/couple1.jpg" alt="Mempelai Pria">
                     </div>
                     <br>
-                    <p class="couple-detail">Ali Akbar</p>
+                    <p class>Ali Akbar</p>
                     <div class="img-wrapper">
                         <img src="assets/img/couple2.jpg" alt="Mempelai Wanita">
                     </div>
@@ -208,15 +217,27 @@
         if(typeof to === 'string') {
             to = to.replaceAll('+', ' ')
             $('#to').text(to)
-
             $('body').css('overflow-y', 'hidden')
             $('.overlay').show()
         } else {
-             $('.rightPanel').show()
-             AOS.init();
-         }
-
+            $('.rightPanel').show()
+            $('#audio1').get(0).play()
+            AOS.init();
+        }
+        
         $(document).ready(function() {
+    
+            $('#mediacontrol').click(function(){
+                if($(this).data('muted') === "false") {
+                    $(this).find('i').attr('class', 'fas fa-volume-mute')
+                    $(this).data('muted', 'true')
+                    $('#audio1').get(0).muted = true ;
+                } else {
+                    $(this).find('i').attr('class', 'fas fa-volume')
+                    $(this).data('muted', 'false')
+                    $('#audio1').get(0).muted = false ;
+                }
+            })
             // alert()
            
             // if($('.tab-bottom').length) {
@@ -236,6 +257,7 @@
                 $('body').css('overflow-y', 'scroll');
                 $('.overlay').hide();
                 $('.rightPanel').show()
+                $('#audio1').get(0).play();
                 AOS.init();
             })
         })
