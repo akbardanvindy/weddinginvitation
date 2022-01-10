@@ -181,7 +181,8 @@
     }
 
     .leftPanel {
-      height: 91.5vh;
+      /* height: calc(100% - 10%); */
+      height: 93vh;
       background: transparent;
     }
 
@@ -193,9 +194,11 @@
       position: relative;
       width: 100%;
     }
+
     #btn-lihat {
       width: 100%;
     }
+
     #btn-lihat:hover {
       color: #fff;
       cursor: pointer;
